@@ -109,7 +109,7 @@ You can upload a Whatsapp_data.txt file using the `/upload_file/` endpoint.
 
 ### Generate Plots
 
-Use the `/time_plot/` and `/pie_plot/` endpoints to generate plots from the uploaded data.
+Use the `/plots/time_plot/` and `/plots/pie_plot/` endpoints to generate plots from the uploaded data.
 Make share to upload the file first
 
 ## API Endpoints
@@ -120,12 +120,12 @@ Make share to upload the file first
 - **Request**: `UploadFile`
 - **Response**: JSON with the filename or an error message.
 
-### `GET /time_plot/`
+### `GET /plots/time_plot/`
 
 - **Description**: Generate a time plot from the uploaded data.
 - **Response**: JSON with the base64 encoded image of the time plot.
 
-### `GET /pie_plot/`
+### `GET /plots/pie_plot/`
 
 - **Description**: Generate a pie chart from the uploaded data.
 - **Response**: JSON with the base64 encoded image of the pie chart.

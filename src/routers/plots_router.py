@@ -27,4 +27,4 @@ async def send_pie_plot(df: Optional[pd.DataFrame] = Depends(lambda: data_holder
     pie_plot_fig = pie_plot(df) 
     encoded_fig = encode_fig(pie_plot_fig)
     
-    return {"Time plot": encoded_fig}
+    return {"Pie plot": encoded_fig}
