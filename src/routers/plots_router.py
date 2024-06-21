@@ -1,5 +1,6 @@
 from fastapi import APIRouter, HTTPException, Depends
-from src.utils.utils import time_plot, pie_plot, encode_fig
+from src.utils.utils import encode_fig
+from src.utils.plots import time_plot, pie_plot
 from ..utils.Data_holder import data_holder
 from typing import Optional
 import pandas as pd
