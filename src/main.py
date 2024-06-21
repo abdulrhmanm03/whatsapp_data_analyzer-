@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import src.routers.plots_router as plots
-import src.routers.upload_file as upload
+import routers.upload_router as upload
 
 
 app = FastAPI()
