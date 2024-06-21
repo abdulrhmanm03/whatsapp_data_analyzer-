@@ -1,7 +1,7 @@
 from fastapi import APIRouter, UploadFile
 from fastapi.responses import JSONResponse
-from ..utils import file_to_pd_frame
-from ..Data_holder import data_holder
+from src.utils.utils import file_to_pd_frame
+from ..utils.Data_holder import data_holder
 
 
 router = APIRouter(prefix="/upload_file")

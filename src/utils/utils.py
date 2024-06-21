@@ -68,9 +68,9 @@ def pie_plot(df):
     return fig 
 
 
-def encode_fig(fig):
+def encode_fig(fig, dpi = 300):
     buffer = io.BytesIO()
-    fig.savefig(buffer, format='png')
+    fig.savefig(buffer, format='png', dpi = dpi)
     buffer.seek(0)
     encoded_fig = base64.b64encode(buffer.read()).decode('utf-8')
     return encoded_fig  
