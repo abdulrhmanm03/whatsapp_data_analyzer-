@@ -1,6 +1,9 @@
 ### Whatsapp data analyzer
 
 
+!!! The readme file is not up to data will be updated soon
+
+
 This FastAPI project provides endpoints to upload a whatsapp chat data file, process the data, and generate various plots. It includes functionality to upload data, generate time plots, and create pie charts.
  
 
