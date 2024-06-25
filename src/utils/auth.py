@@ -1,3 +1,5 @@
+from sqlalchemy.orm import Session
+from passlib.context import CryptContext
 from itsdangerous import URLSafeTimedSerializer
 import os
 from dotenv import load_dotenv
@@ -21,10 +23,16 @@ def load_session_token(token: str):
     except Exception:
         return None
 
-def verify_session_token(file_name, token):
-    token = load_session_token(token)
-    if not token :
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
+def verify_password(plain_password, hashed_password):
+    return pwd_context.verify(plain_password, hashed_password)
+
+def authenticate_user(db: Session, user_name: str, password: str):
+    from src.db.crud import get_user
+    user = get_user(db, user_name)
+    if not user:
         return False
-    if token != file_name:
+    if not verify_password(password, user.hashed_password):
         return False
-    return True
+    return user

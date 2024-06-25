@@ -1,3 +1,6 @@
+# Database
+*.db
+
 # Whatsapp data
 Whatsapp_data/
 
